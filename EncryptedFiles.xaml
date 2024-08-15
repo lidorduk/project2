@@ -1,0 +1,32 @@
+﻿<Window x:Class="GUI___Encrypt.EncryptedFiles"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GUI___Encrypt"
+        mc:Ignorable="d"
+        Title="EncryptedFiles" Height="Auto" Width="Auto" Loaded="Window_Loaded">
+    <Window.Resources>
+        <CollectionViewSource x:Key="fileViewSource" d:DesignSource="{d:DesignInstance {x:Type local:File}, CreateList=True}"/>
+    </Window.Resources>
+    <Grid>
+        <Grid Name="G1" Width="Auto" DataContext="{StaticResource fileViewSource}" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <StackPanel Name="SP1" Grid.Column="0" >
+                <DataGrid x:Name="fileDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" RowDetailsVisibilityMode="VisibleWhenSelected">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn x:Name="mACColumn" Binding="{Binding MAC}" Header="MAC" Width="*"/>
+                        <DataGridTextColumn x:Name="pathColumn" Binding="{Binding path}" Header="path" Width="*"/>
+                        <DataGridTextColumn x:Name="timeColumn" Binding="{Binding Time}" Header="Time" Width="*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+            <StackPanel Name="SPB" Grid.Column="3" HorizontalAlignment="Center">
+                <Button Name="DecryptB" Click="DecryptB_Click" Content="Decrypt All Files"></Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

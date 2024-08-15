@@ -1,0 +1,33 @@
+﻿<Window x:Class="GUI___Encrypt.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="auto" Width="620">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Name="C1" Width="300" ></ColumnDefinition>
+            <ColumnDefinition Name="C2" Width="300"  ></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <ListBox Name="LB1" Grid.Column="0" ScrollViewer.VerticalScrollBarVisibility="Auto" FontSize="20" Width="300" SelectionChanged="LbTodoList_SelectionChanged"></ListBox>
+        <StackPanel Name="SP"  Grid.Column="1" Width="auto" HorizontalAlignment="Stretch" >
+            <StackPanel Name="SP1" Orientation="Horizontal">
+                <TextBlock Text="Search:" FontSize="20" Width="70"></TextBlock>
+                <TextBox Name="TB" FontSize="20" Width="230
+                         "></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Name="FirstButtons">
+            <Button Name="Path" Width="60"  Content="Path" Click="Path_Click"/>
+                <Button Content="Back" Width="60" Click="Back_Click"/>
+                <Button Content="Encrypt" Width="60" Click="Encrypt_Click" />
+                <Button Content="Decrypt" Width="60" Click="Decrypt_Click"/>
+                <Button Content="Drives" Width="60" Click="Drivers_Click"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Name="EncryptButtons">
+                <Button Content="Pictures" Width="150" Click="Encrypt_Click" />
+                <Button Content="Documents" Width="150" Click="Encrypt_Click"/>
+            </StackPanel>
+            <StackPanel Name="Drivers" Orientation="Horizontal" HorizontalAlignment="Center"></StackPanel>
+            <Button Name="FilesB" Click="FilesB_Click"  Content="Encrypted Files"></Button>
+            <TextBox Name="OUTPUT" HorizontalAlignment="Stretch" TextWrapping="Wrap"></TextBox>
+        </StackPanel>
+    </Grid>
+</Window>

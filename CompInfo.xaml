@@ -1,0 +1,22 @@
+﻿<Window x:Class="GUI___Encrypt.CompInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GUI___Encrypt"
+        mc:Ignorable="d"
+        Title="CompInfo" Height="Auto" Width="Auto" Loaded="Window_Loaded">
+    <Window.Resources>
+        <CollectionViewSource x:Key="computerViewSource" d:DesignSource="{d:DesignInstance {x:Type local:Computer}, CreateList=True}"/>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource computerViewSource}">
+        <DataGrid x:Name="computerDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" RowDetailsVisibilityMode="VisibleWhenSelected">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="iPColumn" Binding="{Binding IP}" Header="IP" Width="*"/>
+                <DataGridTextColumn x:Name="mACColumn" Binding="{Binding MAC}" Header="MAC" Width="*"/>
+                <DataGridTextColumn x:Name="machineNameColumn" Binding="{Binding MachineName}" Header="Machine Name" Width="*"/>
+                <DataGridTextColumn x:Name="oSColumn" Binding="{Binding OS}" Header="OS" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

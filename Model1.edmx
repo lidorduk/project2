@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Database1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Computers">
+          <Key>
+            <PropertyRef Name="MAC" />
+          </Key>
+          <Property Name="MAC" Type="nvarchar" MaxLength="1000" Nullable="false" />
+          <Property Name="MachineName" Type="nvarchar" MaxLength="1000" />
+          <Property Name="IP" Type="nvarchar" MaxLength="1000" />
+          <Property Name="OS" Type="nvarchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="Files">
+          <Key>
+            <PropertyRef Name="MAC" />
+            <PropertyRef Name="path" />
+            <PropertyRef Name="Time" />
+          </Key>
+          <Property Name="MAC" Type="nvarchar" MaxLength="1000" Nullable="false" />
+          <Property Name="path" Type="nvarchar" MaxLength="1000" Nullable="false" />
+          <Property Name="password" Type="varbinary" MaxLength="1000" />
+          <Property Name="salt" Type="varbinary" MaxLength="1000" />
+          <Property Name="Time" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="MAC">
+          <End Role="Computers" Type="Self.Computers" Multiplicity="1" />
+          <End Role="Files" Type="Self.Files" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Computers">
+              <PropertyRef Name="MAC" />
+            </Principal>
+            <Dependent Role="Files">
+              <PropertyRef Name="MAC" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Database1ModelStoreContainer">
+          <EntitySet Name="Computers" EntityType="Self.Computers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Files" EntityType="Self.Files" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="MAC" Association="Self.MAC">
+            <End Role="Computers" EntitySet="Computers" />
+            <End Role="Files" EntitySet="Files" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Database1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Computer">
+          <Key>
+            <PropertyRef Name="MAC" />
+          </Key>
+          <Property Name="MAC" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MachineName" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="IP" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="OS" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Files" Relationship="Self.MAC" FromRole="Computers" ToRole="Files" />
+        </EntityType>
+        <EntityType Name="File">
+          <Key>
+            <PropertyRef Name="MAC" />
+            <PropertyRef Name="path" />
+            <PropertyRef Name="Time" />
+          </Key>
+          <Property Name="MAC" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="path" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="password" Type="Binary" MaxLength="1000" FixedLength="false" />
+          <Property Name="salt" Type="Binary" MaxLength="1000" FixedLength="false" />
+          <Property Name="Time" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Computer" Relationship="Self.MAC" FromRole="Files" ToRole="Computers" />
+        </EntityType>
+        <Association Name="MAC">
+          <End Role="Computers" Type="Self.Computer" Multiplicity="1" />
+          <End Role="Files" Type="Self.File" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Computers">
+              <PropertyRef Name="MAC" />
+            </Principal>
+            <Dependent Role="Files">
+              <PropertyRef Name="MAC" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Database1Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Computers" EntityType="Self.Computer" />
+          <EntitySet Name="Files" EntityType="Self.File" />
+          <AssociationSet Name="MAC" Association="Self.MAC">
+            <End Role="Computers" EntitySet="Computers" />
+            <End Role="Files" EntitySet="Files" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Database1ModelStoreContainer" CdmEntityContainer="Database1Entities">
+          <EntitySetMapping Name="Computers">
+            <EntityTypeMapping TypeName="Database1Model.Computer">
+              <MappingFragment StoreEntitySet="Computers">
+                <ScalarProperty Name="MAC" ColumnName="MAC" />
+                <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+                <ScalarProperty Name="IP" ColumnName="IP" />
+                <ScalarProperty Name="OS" ColumnName="OS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Files">
+            <EntityTypeMapping TypeName="Database1Model.File">
+              <MappingFragment StoreEntitySet="Files">
+                <ScalarProperty Name="MAC" ColumnName="MAC" />
+                <ScalarProperty Name="path" ColumnName="path" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="salt" ColumnName="salt" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

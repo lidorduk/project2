@@ -1,0 +1,43 @@
+d:\users\user\documents\visual studio 2013\Projects\ListenerEnc\ListenerEnc\bin\Debug\ListenerEnc.exe.config
+d:\users\user\documents\visual studio 2013\Projects\ListenerEnc\ListenerEnc\bin\Debug\ListenerEnc.exe
+d:\users\user\documents\visual studio 2013\Projects\ListenerEnc\ListenerEnc\bin\Debug\ListenerEnc.pdb
+d:\users\user\documents\visual studio 2013\Projects\ListenerEnc\ListenerEnc\obj\Debug\ListenerEnc.csprojResolveAssemblyReference.cache
+d:\users\user\documents\visual studio 2013\Projects\ListenerEnc\ListenerEnc\obj\Debug\ListenerEnc.exe
+d:\users\user\documents\visual studio 2013\Projects\ListenerEnc\ListenerEnc\obj\Debug\ListenerEnc.pdb
+D:\ListenerEnc\ListenerEnc\bin\Debug\ListenerEnc.exe.config
+D:\ListenerEnc\ListenerEnc\obj\Debug\ListenerEnc.exe
+D:\ListenerEnc\ListenerEnc\obj\Debug\ListenerEnc.pdb
+D:\ListenerEnc\ListenerEnc\bin\Debug\ListenerEnc.exe
+D:\ListenerEnc\ListenerEnc\bin\Debug\ListenerEnc.pdb
+D:\ListenerEnc\ListenerEnc\obj\Debug\ListenerEnc.csprojResolveAssemblyReference.cache
+F:\Desktop\ListenerEnc\ListenerEnc\bin\Debug\ListenerEnc.exe
+F:\Desktop\ListenerEnc\ListenerEnc\bin\Debug\ListenerEnc.exe.config
+F:\Desktop\ListenerEnc\ListenerEnc\bin\Debug\ListenerEnc.pdb
+F:\Desktop\ListenerEnc\ListenerEnc\obj\Debug\ListenerEnc.exe
+F:\Desktop\ListenerEnc\ListenerEnc\obj\Debug\ListenerEnc.pdb
+F:\Desktop\ListenerEnc\ListenerEnc\obj\Debug\ListenerEnc.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\ListenerEnc\ListenerEnc\bin\Debug\ListenerEnc.exe.config
+C:\Users\User\Desktop\ListenerEnc\ListenerEnc\bin\Debug\ListenerEnc.exe
+C:\Users\User\Desktop\ListenerEnc\ListenerEnc\bin\Debug\ListenerEnc.pdb
+C:\Users\User\Desktop\ListenerEnc\ListenerEnc\obj\Debug\ListenerEnc.exe
+C:\Users\User\Desktop\ListenerEnc\ListenerEnc\obj\Debug\ListenerEnc.pdb
+C:\Users\Admin\Desktop\פרוייק הנדסת תוכנה\ListenerEnc\ListenerEnc\bin\Debug\ListenerEnc.exe.config
+C:\Users\Admin\Desktop\פרוייק הנדסת תוכנה\ListenerEnc\ListenerEnc\bin\Debug\ListenerEnc.exe
+C:\Users\Admin\Desktop\פרוייק הנדסת תוכנה\ListenerEnc\ListenerEnc\bin\Debug\ListenerEnc.pdb
+C:\Users\Admin\Desktop\פרוייק הנדסת תוכנה\ListenerEnc\ListenerEnc\obj\Debug\ListenerEnc.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\פרוייק הנדסת תוכנה\ListenerEnc\ListenerEnc\obj\Debug\ListenerEnc.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\פרוייק הנדסת תוכנה\ListenerEnc\ListenerEnc\obj\Debug\ListenerEnc.exe
+C:\Users\Admin\Desktop\פרוייק הנדסת תוכנה\ListenerEnc\ListenerEnc\obj\Debug\ListenerEnc.pdb
+C:\Users\Admin\Desktop\school prog proj\ListenerEnc\ListenerEnc\bin\Debug\ListenerEnc.exe.config
+C:\Users\Admin\Desktop\school prog proj\ListenerEnc\ListenerEnc\bin\Debug\ListenerEnc.exe
+C:\Users\Admin\Desktop\school prog proj\ListenerEnc\ListenerEnc\bin\Debug\ListenerEnc.pdb
+C:\Users\Admin\Desktop\school prog proj\ListenerEnc\ListenerEnc\obj\Debug\ListenerEnc.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\school prog proj\ListenerEnc\ListenerEnc\obj\Debug\ListenerEnc.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\school prog proj\ListenerEnc\ListenerEnc\obj\Debug\ListenerEnc.exe
+C:\Users\Admin\Desktop\school prog proj\ListenerEnc\ListenerEnc\obj\Debug\ListenerEnc.pdb
+C:\Users\LIDOR\Desktop\וירוס כופר\ListenerEnc\ListenerEnc\bin\Debug\ListenerEnc.exe.config
+C:\Users\LIDOR\Desktop\וירוס כופר\ListenerEnc\ListenerEnc\bin\Debug\ListenerEnc.exe
+C:\Users\LIDOR\Desktop\וירוס כופר\ListenerEnc\ListenerEnc\bin\Debug\ListenerEnc.pdb
+C:\Users\LIDOR\Desktop\וירוס כופר\ListenerEnc\ListenerEnc\obj\Debug\ListenerEnc.csproj.CoreCompileInputs.cache
+C:\Users\LIDOR\Desktop\וירוס כופר\ListenerEnc\ListenerEnc\obj\Debug\ListenerEnc.exe
+C:\Users\LIDOR\Desktop\וירוס כופר\ListenerEnc\ListenerEnc\obj\Debug\ListenerEnc.pdb
